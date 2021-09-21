@@ -1,0 +1,41 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<body><div class="container-fluid">
+<h1>STUDENT DETAILS</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>RESTAURANT NAME</th>
+        <th>CITY NAME</th>
+
+        <th>TOTAL SEAT NOS</th>
+
+        <th>DATE</th>
+        <th>TIME</th>
+
+    </tr>
+
+    {% for i in s %}
+    <tr>
+        <td>{{i.restaurant_name}}</td>
+        <td>{{i.city_name}}</td>
+
+        <td>{{i.nos}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.time}}</td>
+
+
+
+
+    </tr>
+    {% endfor %}
+    </table>
+
+</table>
+
+
+</div>
+</body>
+</html>
+{% endblock %}

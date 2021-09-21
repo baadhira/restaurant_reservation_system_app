@@ -1,0 +1,36 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<center><h1>Welcome to Lunchbox</h1></center>
+
+<div class="row">
+    <div class="col-md-3">
+      <a href="{% url 'findrestaurant' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/reserved.jpeg' %}" alt="Reservation  image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Restaurant
+            </h5>
+            Book your favourite restaurants for lunch services.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'findmess' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/messs.jpeg' %}" alt="Mess food image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Mess
+            </h5>
+            Book at your comfortable restaurants for 30 days homely lunch
+          </div>
+        </div>
+      </a>
+    </div>
+</div>
+{% endblock %}
